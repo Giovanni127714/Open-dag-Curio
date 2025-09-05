@@ -1,0 +1,243 @@
+/* Algemene styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: #f8f8f8;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #004080;
+    color: white;
+    padding: 15px 30px;
+    flex-wrap: wrap; /* Zorgt dat logo en nav afbreken als nodig */
+}
+
+header .logo {
+    height: 40px; /* pas aan indien nodig */
+    width: auto;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* voorkomt dat de navbar buiten beeld valt */
+    padding: 0;
+    margin: 0;
+    justify-content: center; /* centreren als ze afbreken */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ffcc00;
+}
+
+/* Intro */
+.intro {
+    padding: 50px 20px;
+    text-align: center;
+    background: #e6f0ff;
+}
+
+.intro h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Rooster */
+#rooster {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.rooster-box {
+    border: 2px solid #004080;
+    padding: 20px;
+    background: white;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 8px;
+}
+
+/* Maak afbeeldingen kleiner en centraal uitgelijnd */
+.rooster-image,
+.opleiding-image {
+    display: block;
+    width: 100%;
+    max-width: 480px;    /* pas aan naar 320px of 240px als je ze nog kleiner wilt */
+    height: auto;        /* behoudt aspect ratio */
+    margin: 12px auto 0; /* centreert de afbeelding */
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(2,6,23,0.06);
+    object-fit: cover;
+}
+
+/* Docenten */
+#docenten {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.docenten-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.docent {
+    text-align: center;
+    width: 100px;
+}
+
+.docent-foto {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto 10px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.docent-foto:hover {
+    transform: scale(1.1);
+}
+
+.docent p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Vakken */
+#vakken {
+    padding: 40px 20px;
+    text-align: center;
+    background: #e6f0ff;
+}
+
+.vakken-box {
+    border: 2px solid #004080;
+    padding: 20px;
+    background: white;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 8px;
+}
+
+/* Centraal uitlijnen van het opleidingsoverzicht */
+#opleidingsoverzicht {
+    padding: 28px 16px;
+}
+
+#opleidingsoverzicht .opleiding-box {
+    max-width: 720px;      /* pas aan naar wens */
+    margin: 0 auto;        /* centreert de box horizontaal */
+    padding: 18px;
+    text-align: center;    /* center tekst en inhoud */
+    box-shadow: 0 6px 18px rgba(18,23,40,0.04);
+    border-radius: 10px;
+    background: #fff;
+}
+
+/* Maak de afbeelding kleiner en gecentreerd binnen de box */
+#opleidingsoverzicht .opleiding-image {
+    display: block;
+    width: 100%;
+    max-width: 360px;      /* pas aan voor kleinere/grotere afbeelding */
+    height: auto;
+    margin: 14px auto 0;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Optioneel: iets ruimere regels voor betere leesbaarheid */
+#opleidingsoverzicht .opleiding-box p {
+    margin-bottom: 0.75rem;
+    color: #334155;
+    line-height: 1.45;
+}
+
+/* Titel van opleidingsoverzicht centreren en opmaken */
+#opleidingsoverzicht h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #002d66;
+    margin: 0 0 12px;
+    font-weight: 700;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #004080;
+    color: white;
+}
+
+/* -------------------- MEDIA QUERIES -------------------- */
+
+/* Tablet */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .intro h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Mobiel */
+@media (max-width: 480px) {
+    .intro h1 {
+        font-size: 1.5rem;
+    }
+
+    .rooster-box, 
+    .vakken-box {
+        padding: 15px;
+    }
+
+    .docenten-list {
+        gap: 15px;
+    }
+
+    .docent {
+        width: 80px;
+    }
+
+    .docent-foto {
+        width: 60px;
+        height: 60px;
+    }
+
+    .docent p {
+        font-size: 0.8rem;
+    }
+}
